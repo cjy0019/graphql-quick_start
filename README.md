@@ -3,6 +3,7 @@
 ### 1. 설치 라이브러리
 
 1. graphql-yoga
+2. babel-env
 
 ### 2. 개요
 
@@ -17,3 +18,8 @@ REST 방식을 사용하면 /users/ GET 이런 방식으로 요청을 보내게 
 또, 하나의 endpoint로의 요청으로는 충분한 데이터를 받지 못하는 상황이 있을 수 있다. user와 friend라는 endpoint로 두 번의 요청을 보내야 앱이 실행되는 상황이 발생할 수 있는데 이를 `Under-fetching`이라고도 부른다.
 
 이 문제들을 해결할 수 있는 것 : GraphQL
+
+## 3. 사용
+
+query의 타입을 정의하고 resolver를 선언.
+localhost:4000에서 playground가 제공됨.
