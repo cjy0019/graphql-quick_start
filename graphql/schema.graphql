@@ -12,11 +12,14 @@ type QueryPeople {
 
 type Movie {
   id: Int!
-  name: String!
-  score: Int!
+  title: String!
+  rating: Float!
+  summary: String
+  language: String
+  medium_cover_image: String!
 }
 
-type Query {
+type QueryMovie {
   movies: [Movie]!
   movie(id: Int!): Movie
 }
@@ -24,4 +27,8 @@ type Query {
 type Mutation {
   addMovie(name: String!, score: Int!): Movie!
   deleteMovie(id: Int!): Boolean!
+}
+
+type Query {
+  movies(limit: Int, rating: Float!): [Movie]!
 }

@@ -6,9 +6,12 @@ const resolvers = {
   //   people: () => people,
   //   person: (_, args) => getById(args.id),
   // },
+  // Query: {
+  //   movies: () => getMovies(),
+  //   movie: (_, args) => getById(args.id),
+  // },
   Query: {
-    movies: () => getMovies(),
-    movie: (_, args) => getById(args.id),
+    movies: (_, { rating, limit }) => getMovies(limit, rating),
   },
   Mutation: {
     addMovie: (_, { name, score }) => addMovie(name, score),

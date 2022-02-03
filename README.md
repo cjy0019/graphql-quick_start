@@ -4,6 +4,7 @@
 
 1. graphql-yoga
 2. babel-env
+3. node-fetch
 
 ### 2. 개요
 
