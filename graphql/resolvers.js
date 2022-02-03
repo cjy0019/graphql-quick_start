@@ -1,12 +1,9 @@
-const Messi = {
-  name: 'Leo Messi',
-  age: 34,
-  gender: 'male',
-};
+import { getById, people } from '../db/db';
 
 const resolvers = {
   Query: {
-    person: () => Messi,
+    people: () => people,
+    person: () => getById(),
   },
 };
 
